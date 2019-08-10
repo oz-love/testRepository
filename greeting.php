@@ -1,12 +1,15 @@
 <?php
-if (strlen($_GET['text']) < 1) {
-	echo "文字を入力してください";
+if (!empty($_GET['text'])) {
+	echo "Hello " . $_GET['text'];
 } else {
-	echo "Hello" . $_GET['text'];
+	echo "文字を入力してください";
 }
 ?>
 <!DOCKTYPE html>
 <html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
 <body>
 <h3>Greeting</h3>
 <form action="" post="get">
